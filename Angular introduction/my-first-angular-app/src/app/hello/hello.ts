@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './hello.css'
 })
 export class Hello {
+  title = 'Hello angular! Testing my first router import'
+  count: number = 0;
 
+  increment(){
+    this.count++
+  }
+
+  clear() {
+    this.count = 0
+  }
+constructor(){
+
+}
 }

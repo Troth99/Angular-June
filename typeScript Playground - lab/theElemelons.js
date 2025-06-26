@@ -118,15 +118,11 @@ var Melolemonmelon = /** @class */ (function (_super) {
 }(Watermelon));
 // let test : Melon = new Melon(100, "Test");
 // //Throws error
-var watermelon = new Watermelon(12.5, "Kingsize");
+var watermelon = new Earthmelon(12.5, "Kingsize");
 console.log(watermelon.toString());
-var melon = new Melolemonmelon(10, 'Mega');
-melon.morph();
-console.log(melon.toString());
-melon.morph();
-console.log(melon.toString());
-melon.morph();
-console.log(melon.toString());
+// let melon = new Melolemonmelon(10, 'Mega')
+// melon.morph()
+// console.log(melon.toString())
 // Element: Water
 // Sort: Kingsize
 // Element Index: 100
