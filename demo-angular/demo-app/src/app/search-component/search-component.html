@@ -1,0 +1,16 @@
+<div class="search-wrapper">
+    <form class="search-form" (submit)="onSubmit(searchInput, $event)">
+        <input #searchInput type="text" placeholder="Search..." [(ngModel)]="searchTerm" name="search"
+            (input)="onSearch(searchTerm, $event)" (blur)="onBlur()" autocomplete="off" />
+        <button type="submit">🔍</button>
+    </form>
+
+  @if(filteredResult.length > 0) {
+    <ul class="dropdown dropdown-show">
+      @for(result of filteredResult; track result) {
+        <li (click)="onSelect(result)">{{result}}</li>
+      }
+    </ul>
+  }
+
+</div>
