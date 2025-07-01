@@ -44,6 +44,14 @@ ul.auth-links {
   color: #1abc9c; /* акцентен цвят */
 }
 
+.right-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  min-width: 300px;
+  justify-content: flex-end;
+  flex-shrink: 0; 
+}
 @media (max-width: 600px) {
     :root {
     --fs-body: clamp(0.75em, 0.5rem + 0.8vw, 0.9rem);

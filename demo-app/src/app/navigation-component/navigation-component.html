@@ -8,13 +8,14 @@
     <li><a routerLink="/contacts">Contacts</a></li>
   </ul>
 <app-search-component></app-search-component>
+<div class="right-container">
 <ul class="auth-links">
   @if (!isLoggedIn) {
     <li><a routerLink="/login">Login</a></li>
     <li><a routerLink="/register">Register</a></li>
   } @else {
-    <li><a routerLink="/profile">Profile</a></li>
-    <li><a href="#" (click)="logout()">Logout</a></li>
+    <app-navigation-dropdown-component></app-navigation-dropdown-component>
   }
 </ul>
+</div>
 </nav>

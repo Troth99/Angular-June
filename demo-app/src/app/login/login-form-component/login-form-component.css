@@ -1,0 +1,85 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+.login-container {
+  display: flex;
+  width: 800px;
+  max-width: 90vw;
+  height: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  
+}
+.login-image {
+  flex: 1;
+  background-image: url('../../../../public/blue-white-leafy-background-vector_53876-136080 1.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.85);
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  padding: 60px 50px;
+  box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 18px 20px;
+  margin-bottom: 25px;
+  font-size: 1.15rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 18px 0;
+  background: #3498db;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #2980b9;
+}
+
+.sign-in {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.sign-in a {
+  display: block;
+  cursor: pointer;
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.sign-in a:hover {
+  text-decoration: underline;
+}

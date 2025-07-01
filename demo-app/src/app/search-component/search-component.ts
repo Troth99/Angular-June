@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { SearchDataService } from '../service/search-data/search-data-service';
 import { FormsModule } from '@angular/forms';
+import { SearchDataService } from '../service/search-data/search-data-service';
 
 @Component({
   selector: 'app-search-component',

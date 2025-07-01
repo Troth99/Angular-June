@@ -1,0 +1,11 @@
+<div class="dropdown" (click)="toggleDropDown()" tabindex="0" (blur)="closeDropDown()">
+  <button class="dropdown-toggle">Profile ▼</button>
+
+  <ul class="dropdown-menu" [class.show]="dropDownOpen">
+    @if(dropDownOpen){
+    <li><a routerLink="/profile">Profile</a></li>
+    <li><a routerLink="#">Settings</a></li>
+    <li><a href="#" (click)="logout($event)">Logout</a></li>
+    }
+  </ul>
+</div>
