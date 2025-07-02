@@ -3,7 +3,6 @@ import { AboutComponent } from '../../about-component/about-component';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import {
-  
   emailValidators,
   passwordValidators,
 } from '../../user/user.validation';
@@ -21,7 +20,11 @@ export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
   loginError = false;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   get email() {
     return this.loginForm.get('email');
@@ -30,6 +33,7 @@ export class LoginFormComponent implements OnInit {
   get password() {
     return this.loginForm.get('password');
   }
+  
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', emailValidators],
@@ -38,20 +42,22 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit() {
-  
-   this.loginError = false;
+    this.loginError = false;
 
     if (this.loginForm.valid) {
       const email = this.loginForm.value.email;
       const password = this.loginForm.value.password;
+
       if (email === mockUser.email && password === mockUser.password) {
         this.authService.setToken(email);
-        this.router.navigate([""])
+        this.router.navigate(['']);
+
       } else {
         this.loginError = true;
       }
+
     } else {
-         this.loginError = true;
+      this.loginError = true;
     }
   }
 }

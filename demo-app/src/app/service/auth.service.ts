@@ -1,9 +1,5 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
-import { TokenUtils } from "../utils/getToken.utils";
-import { Token } from "@angular/compiler";
-
-
 
 
 @Injectable({providedIn: 'root'})
@@ -22,7 +18,7 @@ export class AuthService {
    }
 
     logout(){
-        localStorage.removeItem('token')
+        localStorage.removeItem('email')
         this.loggedIn.next(false)
     }
 }
