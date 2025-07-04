@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/reset/reset.css';
+@import './styles/tpography/typography.css';
+@import './styles/responsilve/responsive.css';
+@import './styles/layout/layout.css';
+
+
+body {
+    max-width: 1366px;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+    font-optical-sizing: auto;
+    background-color: #e4e3e3;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px dashed #999;
+}
+
+span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #4ebced;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    width: 50%;
+}
+
+aside {
+    width: 29%;
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
